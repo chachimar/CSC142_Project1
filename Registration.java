@@ -307,9 +307,8 @@ public class Registration{
                 tuition = credits * 28.73 + 292.95;
             } else {
                 tuition = credits * 52.06 - 126.99;
-            } return tuition;
+            }  return tuition;
         }
-        return tuition;
     }
 // Get Fees Method - - - - - - - - - -
   static double getFee(double number_Of_Credit, Scanner scanner) {
