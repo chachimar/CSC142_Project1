@@ -275,7 +275,7 @@ public class Registration{
     static double calcTuition(int credits, String residentStatus)
       {
         double tuition = 0.00;
-        if (residentStatus.equals("Washington_resident")) {
+        if (residentStatus.equals("Washington_resident") || residentStatus.equals("Washingt_state_employee")) {
           if (credits < 11) {
                 tuition = 116.05 * credits;
              } else if (credits < 19) {
@@ -308,7 +308,8 @@ public class Registration{
             } else {
                 tuition = credits * 52.06 - 126.99;
             } return tuition;
-        }
+        } else {
+           tuition = 0.00 // running start cost only include fees
         return tuition;
     }
 // Get Fees Method - - - - - - - - - -
